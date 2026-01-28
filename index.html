@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Management</title>
+    <title>Student Management System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,22 +10,30 @@
 
 <div class="container">
     <input type="hidden" id="studentId">
-    <input type="text" id="name" placeholder="Name">
-    <input type="number" id="age" placeholder="Age">
-    <input type="text" id="course" placeholder="Course">
 
-    <button onclick="studentApp.addStudent()">Add</button>
-    <button onclick="studentApp.updateStudent()">Update</button>
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="number" id="age" placeholder="Enter Age">
+    <input type="text" id="course" placeholder="Enter Course">
+
+    <button onclick="studentApp.addStudent()">Add Student</button>
+    <button onclick="studentApp.updateStudent()">Update Student</button>
 </div>
 
 <table>
     <thead>
         <tr>
-            <th>ID</th><th>Name</th><th>Age</th><th>Course</th><th>Actions</th>
+            <th>#</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Actions</th>
         </tr>
     </thead>
-    <tbody id="studentTable"></tbody>
+    <tbody id="studentTable">
+        
+    </tbody>
 </table>
+<div id="pagination" style="margin-top:20px; text-align:center;"></div>
 
 <script src="script.js"></script>
 </body>
